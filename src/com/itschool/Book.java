@@ -9,7 +9,7 @@ public class Book
     private String []authors;
     private int pages;
     // TODO     добавить использование enum для типа обложки: https://proft.me/2015/03/29/primer-raboty-s-perechisleniyami-enum-v-java/
-    
+
     public Book()
     {
     }
@@ -98,5 +98,22 @@ public class Book
                 ", authors='" + this.getAuthors() + '\'' +
                 ", pages=" + pages +
                 '}';
+    }
+
+    public boolean IsThisAuthor(String author)
+    {
+        boolean result = false;
+
+        for (String currentAuthor: this.authors )
+        {
+            if (currentAuthor.equals(author))
+            {
+                result = true;
+                break;
+            }
+        }
+
+        return result;
+
     }
 }

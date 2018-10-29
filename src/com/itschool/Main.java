@@ -17,5 +17,12 @@ public class Main {
 
         Book book2 = new Book("Second", "unknown", "", 1000);
         System.out.println(book2);
+
+
+        Book book3 = new Book("Синенькая", "роман", "Иванов, Петров, Сидоров", 1000);
+        System.out.println(book3);
+
+        System.out.println(book3.IsThisAuthor("Иванов"));
+
     }
 }
